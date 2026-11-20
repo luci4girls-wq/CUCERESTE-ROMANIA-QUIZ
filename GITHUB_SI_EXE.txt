@@ -1,0 +1,23 @@
+GHID RAPID – GITHUB + INSTALATOR EXE
+
+1. Instalează Node.js LTS și Git for Windows.
+2. Creează un repository nou pe https://github.com/new (de exemplu: romania-exploreaza-judetele).
+3. Descarcă/folosește proiectul complet și extrage arhiva.
+4. Deschide folderul proiectului, apoi click dreapta > Open in Terminal.
+5. Rulează:
+   git init
+   git add .
+   git commit -m "Prima versiune a jocului"
+   git branch -M main
+   git remote add origin https://github.com/NUME-UTILIZATOR/NUME-REPO.git
+   git push -u origin main
+   Înlocuiește NUME-UTILIZATOR și NUME-REPO cu valorile tale.
+6. Pentru instalatorul Windows, în același terminal:
+   npm install
+   npm run dist:win
+7. Găsești Setup.exe în folderul release.
+
+IMPORTANT: rulează construirea EXE pe Windows pentru a obține instalatorul Windows. Nu încărca folderul node_modules sau release în GitHub.
+
+VARIANTA AUTOMATĂ (RECOMANDATĂ):
+După ce împingi proiectul pe GitHub, intră în repository > Actions > Build Windows installer > Run workflow. După ce workflow-ul termină cu succes, deschide rularea și descarcă artifactul "Romania-Exploreaza-Judetele-Setup". În interior găsești fișierul .exe.
